@@ -14,6 +14,7 @@ body {
     /* background-color: #f7f7f7; */
     line-height: 1.6;
     position: relative;
+    /* margin-top: 50px; */
 }
 
 html {
@@ -31,7 +32,7 @@ nav{
     justify-content: space-around;
     align-items: center;
     background-color: #111;
-    position: fixed; /* Keeps navbar at the top */
+    position: sticky; /* Keeps navbar at the top */
     width: 100%;
     top: 0;
     left: 0;
@@ -42,7 +43,7 @@ nav .logo{
     color: #ffffff;
     margin: 16px;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 26px;
     font-family: 'Pacifico', cursive;
 
 }
@@ -57,7 +58,7 @@ nav .logo{
 .navlinks ul li a{
     text-decoration: none;
     color: #ffffff;
-    padding: 18px 16px;
+    padding: 24px 16px;
     display: block;
 }
 .navlinks ul li a:hover{
