@@ -255,7 +255,7 @@ nav {
 /* Services Section */
 .services {
     text-align: center;
-    padding: 60px 20px;
+    padding: 60px 0px;
     background-color: #F9F6EE;
 }
 
@@ -273,6 +273,7 @@ nav {
     gap: 30px;
     justify-items: center;
     text-align: justify;
+    width: 100%;
 
 }
 
@@ -281,8 +282,8 @@ nav {
     /* background-color: #f7f7f7; */
     padding: 15px;
     width: 100%;
-    min-width: 90%;
-    /* max-width: 300px; */
+    /* min-width: 100%; */
+    min-width: 340px;
     text-align: left;
     border-radius: 8px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
