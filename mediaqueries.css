@@ -42,11 +42,14 @@
         gap: 0.5rem;
         text-align: center;
     }
+    .service-item:hover {
+        transform: translateY(0px);
+    }
     .footeragic{
         display: block;
     }
     .footeragic p {
-        padding-left: 0px;
+        padding-right: 0px;
     }
     footer .container p {
         font-size: 12px;

@@ -14,9 +14,8 @@
         <div class="logo">Techmate Innovations</div>
         <div>
             <ul class="nav-links">
-                <li><a class="magic" href="#about">About</a></li>
-                <li><a class="magic" href="#experience">Experience</a></li>
-                <li><a class="magic" href="#projects">Projects</a></li>
+                <li><a class="magic" href="#home">Home</a></li>
+                <li><a class="magic" href="#services">Services</a></li>
                 <li><a class="magic" href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -30,6 +29,7 @@
                 <span></span>
             </div>
             <div class="menu-links">
+                <ul>
                 <li><a href="#home" onclick="toggleMenu()">Home</a></li>
                 <li><a href="#services" onclick="toggleMenu()">Services</a></li>
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
@@ -87,7 +87,7 @@
         <div class="container">
             <h2>Contact Us</h2>
             <div class="footerflex"></div>
-            <p>If you're ready to grow your business with professional services, reach out to us today!</p>
+            <p style="font-style: italic;">If you're ready to grow your business with professional services, reach out to us today!</p>
             <div class="footeragic">
             <p>Email: <a href="mailto:prathapwrk@gmail.com">prathapwrk@gmail.com</a></p>
             <p>Phone: <a href="tel:+919042747877">+91-904-274-7877</a></p>
@@ -116,6 +116,26 @@
     </footer>
 
     <script src="script.js"></script>
+    <script>
+        let lastScrollTop = 0;
+    const desktopNavbar = document.getElementById("desktop-nav");
+    const hamburgerNavbar = document.getElementById("hamburger-nav");
+
+    window.addEventListener("scroll", function () {
+        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+
+        if (scrollTop > lastScrollTop) {
+            // Scrolling down - hide both navbars
+            if (desktopNavbar) desktopNavbar.style.top = "-80px"; // Adjust height if needed
+            if (hamburgerNavbar) hamburgerNavbar.style.top = "-80px";
+        } else {
+            // Scrolling up - show both navbars
+            if (desktopNavbar) desktopNavbar.style.top = "0";
+            if (hamburgerNavbar) hamburgerNavbar.style.top = "0";
+        }
+        lastScrollTop = scrollTop;
+    });
+    </script>
 </body>
 
 </html>
