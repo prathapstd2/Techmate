@@ -236,8 +236,9 @@ nav {
 }
 
 .cta-button {
-    background-color: #fff;
-    color: #333;
+    background: rgba(255, 255, 255, 0.15); /* Light transparent background */
+    backdrop-filter: blur(12px) saturate(180%); /* Frosted glass effect */
+    color: #FFFFFF;
     padding: 15px 40px;
     font-size: 1.2rem;
     box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
@@ -246,7 +247,7 @@ nav {
 }
 
 .cta-button:hover {
-    background-color: #333;
+    background-color: #ffffff;
     color: #fff;
     transform: scale(1.1);
 }
