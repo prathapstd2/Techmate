@@ -71,9 +71,7 @@
         gap: 0.5rem;
         text-align: center;
     } */
-    .service-item:hover {
-        transform: translateY(0px);
-    }
+    
     .footeragic{
         display: block;
     }

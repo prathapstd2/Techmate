@@ -36,6 +36,7 @@ nav{
     width: 100%;
     top: 0;
     left: 0;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     transition: top 0.3s ease-in-out; /* Smooth hiding effect */
     z-index: 1000;
 }
@@ -67,8 +68,8 @@ nav .logo{
 }
 .handbracker{
     position: absolute;
-    top: 18px;
-    right: 18px;
+    top: 24px;
+    right: 30px;
     height: 24px;
     width: 30px;
     cursor: pointer;
@@ -79,10 +80,9 @@ nav .logo{
 }
 
 .bar{
-    height: 3px;
+    height: 2px;
     width: 100%;
     background-color: #ffffff;
-    border-radius: 16px;
 }
 /* nav,
 .nav-links {
@@ -256,7 +256,7 @@ nav {
 .services {
     text-align: center;
     padding: 60px 20px;
-    background-color: #fff;
+    background-color: #F9F6EE;
 }
 
 .services h2 {
@@ -269,7 +269,7 @@ nav {
 /* Service Box */
 .service-box {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(1, 1fr);
     gap: 30px;
     justify-items: center;
     text-align: justify;
@@ -281,15 +281,11 @@ nav {
     /* background-color: #f7f7f7; */
     padding: 15px;
     width: 100%;
-    max-width: 300px;
+    min-width: 400px;
+    /* max-width: 300px; */
     text-align: left;
     border-radius: 8px;
     box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
-    transition: transform 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-10px);
 }
 
 .service-item h3 {
