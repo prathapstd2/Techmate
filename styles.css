@@ -292,6 +292,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    padding-top: 10px;
 }
 
 .footeragic p {
@@ -313,7 +314,6 @@ footer {
     align-items: center;
     justify-content: center;
 }
-
 #socials-container {
     display: flex;
     justify-content: center;
