@@ -1,4 +1,5 @@
 @media screen and (max-width: 1200px) {
+
     /* #desktop-nav {
         display: none;
     }
@@ -6,78 +7,100 @@
     #hamburger-nav {
         display: flex;
     } */
-    .footeragic{
+    .footeragic {
         display: flex;
     }
 }
- @media(max-width:768px){
-            
-            .handbracker{
-                display: flex;
-            }
-            nav{
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .navlinks{
-                display: none;
-                width: 100%;
 
-            }
-            .navlinks ul{
-                flex-direction: column;
-                text-align: center;
-                width: 100%;
-            }
-            .navlinks ul:first-child{
-                border-top: 1px solid #fff;
-            }
-            .navlinks.active{
-                display: flex;
-            }  
-        }
+@media(max-width:768px) {
+
+    .handbracker {
+        display: flex;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navlinks {
+        display: none;
+        width: 100%;
+
+    }
+
+    .navlinks ul {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+    }
+
+    .navlinks ul:first-child {
+        border-top: 1px solid #fff;
+    }
+
+    .navlinks.active {
+        display: flex;
+    }
+}
 
 @media screen and (max-width: 600px) {
 
     .nav-links li a {
         font-size: 1rem;
     }
+
     /* .logo {
         font-size: 1.5rem;
     } */
-    nav .logo{
+    nav .logo {
         font-size: 24px;
     }
+
     .hero {
         text-align: left;
         padding: 40px 15px;
     }
+
     .hero h1 {
         font-size: 1.5rem;
         margin-bottom: 20px;
     }
+
     .hero p {
         font-size: 1rem;
         margin-bottom: 40px;
     }
-    .cta-button{
-    font-size: 12px;
+
+    .cta-button {
+        font-size: 12px;
     }
+
+    .services {
+        padding: 60px 0px;
+
+    .service-item {
+        min-width: 340px;
+    }
+
     .service-item ul li {
         font-size: 15px;
     }
+
     /* .nav-links {
         flex-direction: column;
         gap: 0.5rem;
         text-align: center;
     } */
-    
-    .footeragic{
+
+    .footeragic {
         display: block;
     }
+
     .footeragic p {
         padding-right: 0px;
     }
+
     footer .container p {
         font-size: 12px;
         padding-left: 0px;
