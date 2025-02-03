@@ -10,7 +10,23 @@
 </head>
 
 <body>
-    <nav id="desktop-nav">
+    <nav>
+        <p class="logo">Techmate Innovations</p>
+        <a href="#" class="handbracker" id="hamburgerNavbar" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </a>
+        <div class="navlinks">
+            <ul>
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+                
+            </ul>
+        </div>
+    </nav>
+    <!-- <nav id="desktop-nav">
         <div class="logo">Techmate Innovations</div>
         <div>
             <ul class="nav-links">
@@ -35,7 +51,7 @@
                 <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
             </div>
         </div>
-    </nav>
+    </nav> -->
 
     <section id="home" class="hero">
         <div class="hero-content">
@@ -53,29 +69,39 @@
                 <div class="service-item">
                     <h3>Advertising Design</h3>
                     <ul>
-                        <li>Unique branding and advertisement designs</li>
-                        <li>Stand out from the competition and attract your audience</li>
+                        <li>Specializing in modern poster designs, banner designs, and other creative advertising
+                            solutions that captivate and engage your audience.</li>
+                        <li>Unique, high-quality designs tailored to your brand, perfect for both digital and print. Get
+                            noticed and make a lasting impression!</li>
                     </ul>
                 </div>
                 <div class="service-item">
                     <h3>Website Builder</h3>
                     <ul>
-                        <li>Modern, responsive websites</li>
-                        <li>Optimized for better performance and user experience</li>
+                        <li>Create a stunning, user-friendly website that perfectly represents your brand. I offer
+                            custom website design and development, ensuring your site is responsive, fast, and visually
+                            appealing.</li>
+                        <li>From personal blogs to business websites, I build fully functional websites with a focus on
+                            usability and design, ensuring a seamless online experience for your visitors</li>
                     </ul>
                 </div>
                 <div class="service-item">
                     <h3>Logo Creations</h3>
                     <ul>
-                        <li>Custom logos reflecting your brand identity</li>
-                        <li>Stand out and leave a lasting impression</li>
+                        <li>Get a unique, professional logo that perfectly represents your brand’s identity. I create
+                            original, high-quality logos that stand out and leave a lasting impression.</li>
+                        <li>Whether you're a startup or established business, I design logos that capture your vision,
+                            values, and style, ensuring your brand’s image shines in every detail.</li>
                     </ul>
                 </div>
                 <div class="service-item">
                     <h3>Offer Setup</h3>
                     <ul>
-                        <li>Functional and ergonomic office setup</li>
-                        <li>Improve workplace productivity and design</li>
+                        <li>Transform your workspace with professional office setup services! I provide high-quality
+                            furniture, equipment, and organization solutions tailored to your needs, ensuring a
+                            functional and stylish office environment.</li>
+                        <li>From ergonomic furniture to efficient equipment arrangements, I design office setups that
+                            boost productivity and comfort, whether for a home office or corporate space.</li>
                     </ul>
                 </div>
             </div>
@@ -87,25 +113,18 @@
         <div class="container">
             <h2>Contact Us</h2>
             <div class="footerflex"></div>
-            <p style="font-style: italic;">If you're ready to grow your business with professional services, reach out to us today!</p>
+            <p style="font-style: italic;">If you're ready to grow your business with professional services, reach out
+                to us today!</p>
             <div class="footeragic">
-            <p>Email: <a href="mailto:prathapwrk@gmail.com">prathapwrk@gmail.com</a></p>
-            <p>Phone: <a href="tel:+919042747877">+91-904-274-7877</a></p>
+                <p>Email: <a href="mailto:prathapwrk@gmail.com">prathapwrk@gmail.com</a></p>
+                <p>Phone: <a href="tel:+919042747877">+91-904-274-7877</a></p>
             </div>
             <div id="socials-container">
-                <img
-                  src="assets/linkedin.png"
-                  alt="My LinkedIn profile"
-                  class="icon"
-                  onclick="location.href='https://linkedin.com/'"
-                />
-                <img
-                  src="assets/github.png"
-                  alt="My Github profile"
-                  class="icon"
-                  onclick="location.href='https://github.com/'"
-                />
-              </div>
+                <img src="assets/linkedin.png" alt="My LinkedIn profile" class="icon"
+                    onclick="location.href='https://linkedin.com/'" />
+                <img src="assets/github.png" alt="My Github profile" class="icon"
+                    onclick="location.href='https://github.com/'" />
+            </div>
         </div>
     </section>
 
@@ -118,23 +137,20 @@
     <script src="script.js"></script>
     <script>
         let lastScrollTop = 0;
-    const desktopNavbar = document.getElementById("desktop-nav");
-    const hamburgerNavbar = document.getElementById("hamburger-nav");
+const navbar = document.querySelector("nav"); // Selects the nav element
 
-    window.addEventListener("scroll", function () {
-        let scrollTop = window.scrollY || document.documentElement.scrollTop;
+window.addEventListener("scroll", function () {
+    let scrollTop = window.scrollY || document.documentElement.scrollTop;
 
-        if (scrollTop > lastScrollTop) {
-            // Scrolling down - hide both navbars
-            if (desktopNavbar) desktopNavbar.style.top = "-80px"; // Adjust height if needed
-            if (hamburgerNavbar) hamburgerNavbar.style.top = "-80px";
-        } else {
-            // Scrolling up - show both navbars
-            if (desktopNavbar) desktopNavbar.style.top = "0";
-            if (hamburgerNavbar) hamburgerNavbar.style.top = "0";
-        }
-        lastScrollTop = scrollTop;
-    });
+    if (scrollTop > lastScrollTop) {
+        navbar.style.top = "-80px"; // Hide navbar when scrolling down
+    } else {
+        navbar.style.top = "0"; // Show navbar when scrolling up
+    }
+    
+    lastScrollTop = scrollTop;
+});
+
     </script>
 </body>
 
