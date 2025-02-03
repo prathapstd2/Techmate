@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechMate Innovations</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="mediaqueries.css" />
+</head>
+
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Techmate Innovations</div>
+        <div>
+            <ul class="nav-links">
+                <li><a class="magic" href="#about">About</a></li>
+                <li><a class="magic" href="#experience">Experience</a></li>
+                <li><a class="magic" href="#projects">Projects</a></li>
+                <li><a class="magic" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <nav id="hamburger-nav">
+        <div class="logo">Techmate Innovations</div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <div class="menu-links">
+                <li><a href="#home" onclick="toggleMenu()">Home</a></li>
+                <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            </div>
+        </div>
+    </nav>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Transforming Your Ideas Into Reality</h1>
+            <p>We provide exceptional Advertising Design, Website Building, Logo Creations and Office Setup Services</p>
+            <a href="#contact" class="cta-button">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Our Services</h2>
+            <div class="service-box">
+                <div class="service-item">
+                    <h3>Advertising Design</h3>
+                    <ul>
+                        <li>Unique branding and advertisement designs</li>
+                        <li>Stand out from the competition and attract your audience</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>Website Builder</h3>
+                    <ul>
+                        <li>Modern, responsive websites</li>
+                        <li>Optimized for better performance and user experience</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>Logo Creations</h3>
+                    <ul>
+                        <li>Custom logos reflecting your brand identity</li>
+                        <li>Stand out and leave a lasting impression</li>
+                    </ul>
+                </div>
+                <div class="service-item">
+                    <h3>Offer Setup</h3>
+                    <ul>
+                        <li>Functional and ergonomic office setup</li>
+                        <li>Improve workplace productivity and design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="footerflex"></div>
+            <p>If you're ready to grow your business with professional services, reach out to us today!</p>
+            <div class="footeragic">
+            <p>Email: <a href="mailto:prathapwrk@gmail.com">prathapwrk@gmail.com</a></p>
+            <p>Phone: <a href="tel:+919042747877">+91-904-274-7877</a></p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container footer-content">
+            <p>&copy; 2025 TechMate Innovations. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
