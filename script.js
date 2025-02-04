@@ -9,14 +9,14 @@
 // handbracker.addEventListener('click',()=>{
 //     navlinks.classList.toggle("active");
 // });
-// function toggleMenu() {
-//     const menu = document.querySelector(".navlinks");
-//     const icon = document.querySelector(".hamburger");
-//     menu.classList.toggle("active");
-//     icon.classList.toggle("active");
-//   }
+function toggleMenu() {
+    const menu = document.querySelector(".navlinks");
+    const icon = document.querySelector(".hamburger");
+    menu.classList.toggle("active");
+    icon.classList.toggle("active");
+  }
 let lastScrollTop = 0; // Keeps track of the last scroll position
-const navbar = document.querySelector(".prathap"); // The navbar
+const navbar = document.getElementById("desktop-nav"); // The navbar
 
 window.addEventListener("scroll", function() {
   let currentScroll = window.pageYOffset || document.documentElement.scrollTop;

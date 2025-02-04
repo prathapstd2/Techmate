@@ -35,14 +35,7 @@ nav,
     display: flex;
     
 }
-.prathap {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; /* Ensure it stays on top */
-    transition: top 0.3s; /* Smooth transition when the navbar hides/shows */
-  }
+
 
 nav {
     justify-content: space-around;
