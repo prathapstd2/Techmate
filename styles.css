@@ -115,7 +115,7 @@ a:hover {
 }
 
 .menu-links {
-    position: absolute;
+    position: fixed;
     top: 46px;
     right: 0;
     left: 50%;
