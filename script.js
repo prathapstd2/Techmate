@@ -23,7 +23,7 @@ const icon = document.querySelector(".hamburger-icon");
 window.addEventListener("scroll", () => {
   let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
 
-  if (scrollTop > lastScrollTop && scrollTop > 50) {
+  if (scrollTop > lastScrollTop && scrollTop > 10) {
     // Hide navbar when scrolling down
     navbar.style.transform = "translateY(-100%)";
     menu.classList.remove("open");
