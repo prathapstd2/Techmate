@@ -34,7 +34,15 @@ nav,
 .nav-links {
     display: flex;
 }
-
+#desktop-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    transition: top 0.3s ease-in-out; /* Smooth transition for top */
+  }
 
 nav {
     justify-content: space-around;
