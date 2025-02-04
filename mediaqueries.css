@@ -1,5 +1,5 @@
 @media screen and (max-width: 1200px) {
-
+    
     #desktop-nav {
         display: none;
     }
@@ -21,6 +21,7 @@
 
 
 @media screen and (max-width: 600px) {
+    
 
     .logo {
         font-size: 1.5rem;
@@ -34,7 +35,7 @@
 
     .hero {
         text-align: left;
-        padding: 40px 15px;
+        padding: 100px 15px;
     }
 
     .hero h1 {
