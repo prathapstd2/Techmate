@@ -36,3 +36,21 @@ window.addEventListener("scroll", () => {
   lastScrollTop = scrollTop;
 }, { passive: true });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const list = document.querySelector(".slideshow");
+  const items = document.querySelectorAll(".slideshow li");
+  let index = 0;
+
+  function slideItems() {
+      index++;
+      if (index >= items.length) {
+          index = 0; // Reset to start
+      }
+      list.style.transition = "transform 0.8s ease-in-out";
+      list.style.transform = `translateY(-${index * 50}px)`;
+  }
+
+  setInterval(slideItems, 2000);
+});
+
+
