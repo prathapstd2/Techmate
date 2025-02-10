@@ -1,3 +1,7 @@
+window.onload = function() {
+  alert("👋 Welcome to TechMate Innovations! 🚀\n\nWe're thrilled to have you here. Dive in, explore, and let’s innovate together! ✨");
+};
+
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");

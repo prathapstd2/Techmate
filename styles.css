@@ -213,8 +213,8 @@ a:hover {
 
 .slider-container {
     width: 100%;
-    max-width: 300px; /* Ensure it fits your image size */
-    height: 300px; /* Keep image aspect ratio */
+    max-width: 200px; /* Ensure it fits your image size */
+    height: 200px; /* Keep image aspect ratio */
     margin: 20px auto;
     position: relative;
     overflow: hidden;
