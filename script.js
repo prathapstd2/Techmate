@@ -1,6 +1,16 @@
-window.onload = function() {
-  alert("👋 Welcome to TechMate Innovations! 🚀\n\nWe're thrilled to have you here. Dive in, explore, and let’s innovate together! ✨");
+window.onload = function () {
+  setTimeout(() => {
+      document.getElementById("popup-container").style.visibility = "visible";
+      document.getElementById("popup-container").style.opacity = "1";
+  }, 500); // 0.5s delay before showing popup
 };
+
+function closePopup() {
+  document.getElementById("popup-container").style.opacity = "0";
+  setTimeout(() => {
+      document.getElementById("popup-container").style.visibility = "hidden";
+  }, 300); // Matches CSS transition time
+}
 
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
@@ -70,5 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //     menu.classList.toggle("active");
 //     icon.classList.toggle("active");
 //   }
+//Alert mesage code
+// window.onload = function() {
+//   alert("👋 Welcome to TechMate Innovations! 🚀\n\nWe're thrilled to have you here. Dive in, explore, and let’s innovate together! ✨");
+// };
 
 
