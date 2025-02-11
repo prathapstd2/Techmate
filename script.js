@@ -1,3 +1,4 @@
+//Pop-up image functionality
 window.onload = function () {
   setTimeout(() => {
       document.getElementById("popup-container").style.visibility = "visible";
@@ -12,6 +13,7 @@ function closePopup() {
   }, 300); // Matches CSS transition time
 }
 
+//Navbar scroll down functionality
 function toggleMenu() {
   const menu = document.querySelector(".menu-links");
   const icon = document.querySelector(".hamburger-icon");
@@ -39,6 +41,21 @@ window.addEventListener("scroll", () => {
 
   lastScrollTop = scrollTop;
 }, { passive: true });
+
+//image slider
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".slider-container img");
+  let index = 0;
+
+  function showNextImage() {
+      images[index].classList.remove("active"); // Hide current image
+      index = (index + 1) % images.length; // Move to next image
+      images[index].classList.add("active"); // Show next image
+  }
+
+  setInterval(showNextImage, 2000); // Change image every 0.5 seconds
+});
+
 //whu chosee us
 document.addEventListener("DOMContentLoaded", function () {
   const list = document.querySelector(".slideshow");
@@ -56,19 +73,9 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(slideItems, 2000);
 });
-document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll(".slider-container img");
-  let index = 0;
 
-  function showNextImage() {
-      images[index].classList.remove("active"); // Hide current image
-      index = (index + 1) % images.length; // Move to next image
-      images[index].classList.add("active"); // Show next image
-  }
-
-  setInterval(showNextImage, 2000); // Change image every 0.5 seconds
-});
-
+//Current year functionality
+document.getElementById("year").textContent = new Date().getFullYear();
 // const handbracker = document.getElementsByClassName("handbracker")[0];
 // const navlinks = document.getElementsByClassName("navlinks")[0];
 // handbracker.addEventListener('click',()=>{
