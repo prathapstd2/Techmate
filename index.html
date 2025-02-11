@@ -5,9 +5,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TechMate Innovations</title>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <!-- AOS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="mediaqueries.css" />
 </head>
+
 <body>
     <nav class="prathap" id="desktop-nav">
         <div class="logo">Techmate Innovations</div>
@@ -32,10 +37,10 @@
     <div class="menu-links">
         <ul>
             <li class="hovera"><a href="#" onclick="toggleMenu()">Home</a></li>
-          <li><a href="#services" onclick="toggleMenu()">Services</a></li>
-          <li class="hovera"><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-        </div>
-        </ul>
+            <li><a href="#services" onclick="toggleMenu()">Services</a></li>
+            <li class="hovera"><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+    </div>
+    </ul>
     </div>
     </div>
 
@@ -47,10 +52,10 @@
         </div>
     </section>
 
-    <div id="popup-container">
-        <div class="popup-content">
+    <div id="popup-container" data-aos="zoom-out">
+        <div class="popup-content" data-aos="zoom-out">
             <span class="close-btn" onclick="closePopup()">×</span>
-            <img src="notice.png" alt="Popup Image">
+            <img src="notice.png" data-aos="zoom-out" alt="Popup Image">
         </div>
     </div>
     <!-- Services Section -->
@@ -126,7 +131,7 @@
             </ul>
         </div>
     </div>
-    
+
     <section id="contact" class="contact">
         <div class="container">
             <h2>Contact Us</h2>
@@ -153,6 +158,12 @@
     </footer>
 
 </body>
+<script>
+    AOS.init({
+      duration: 3000,  // Animation duration (in ms)
+      once: true,  // Animation will only happen once
+    });
+  </script>
 <script src="script.js"></script>
 
 
