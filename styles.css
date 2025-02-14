@@ -395,6 +395,149 @@ a:hover {
 .slider-container img.active {
     opacity: 1;
 }
+/* 📍 Center the Enquiry Container */
+.enquiry-container {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center horizontally */
+    justify-content: center; /* Center vertically */
+    /* background: #f9f9f9; */
+    padding: 40px 20px;
+    position: relative;
+}
+
+/* 📍 Centered Text */
+.enquiry-container h1 {
+    text-align: center;
+    font-size: 50px;
+    font-weight: 200;
+    margin-bottom: 10px;
+}
+
+.enquiry-container h4 {
+    text-align: center;
+    font-style: italic;
+    color: grey;
+    padding-bottom: 20px;
+}
+
+/* 📍 Form Wrapper - Centers the Form */
+.enquiry-form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align input fields & button to the left */
+    gap: 20px; /* More space between inputs */
+    width: 100%;
+    max-width: 400px; /* Keeps form compact */
+    /* background: white; */
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* 📍 Input & Select Box Styling */
+.enquiry-form input,
+.enquiry-form select {
+    width: 100%;
+    height: 50px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    transition: 0.3s ease-in-out;
+    margin-bottom: 10px; /* Add spacing below inputs */
+}
+
+.enquiry-form input:focus,
+.enquiry-form select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* 📍 Professional Button Styling */
+.enquiry-form button {
+    width: 100%;
+    padding: 15px;
+    background: linear-gradient(62deg, #8EC5FC 0%, #E0C3FC 100%);
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.enquiry-form button:hover {
+    background: linear-gradient(62deg, #4B8BF4 0%, #6F56D3 100%);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.enquiry-form button:active {
+    transform: translateY(0px);
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 📍 Responsive Design */
+@media (max-width: 768px) {
+    .enquiry-container h1 {
+        font-size: 40px;
+    }
+
+    .enquiry-container h4 {
+        font-size: 16px;
+    }
+
+    .enquiry-form {
+        max-width: 90%;
+    }
+
+    .enquiry-form input,
+    .enquiry-form select {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .enquiry-form button {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .enquiry-container {
+        padding: 30px 10px;
+    }
+
+    .enquiry-container h1 {
+        font-size: 30px;
+    }
+
+    .enquiry-container h4 {
+        font-size: 14px;
+    }
+
+    .enquiry-form {
+        max-width: 100%;
+    }
+
+    .enquiry-form input,
+    .enquiry-form select {
+        width: 100%;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .enquiry-form button {
+        font-size: 14px;
+        padding: 12px;
+    }
+}
+
 /*why schoose us */
 .serviceus {
     width: 100%;
