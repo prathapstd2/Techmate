@@ -383,35 +383,95 @@ a:hover {
     margin-right: 10px;
 }
 
-/*image .slider */
-.slider-container {
+/*why schoose us */
+.serviceus {
     width: 100%;
-    max-width: 200px;
-    /* Ensure it fits your image size */
-    height: 200px;
-    /* Keep image aspect ratio */
-    margin: 20px auto;
-    position: relative;
+    max-width: 600px;
+    margin: auto;
+    padding: 20px;
+    text-align: center;
+    background: #ffffff;
+    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px; */
     overflow: hidden;
-    /* border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 
-.slider-container img {
+.serviceus h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.slideshow-container {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    overflow: hidden;
+}
+
+.slideshow {
+    display: flex;
+    flex-direction: column;
     position: absolute;
     width: 100%;
-    height: 100%;
-    object-fit: cover;
-    /* Ensures images fit without distortion */
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+    animation: slideAnimation 10s infinite linear;
 }
 
-.slider-container img.active {
-    opacity: 1;
+.slideshow li {
+    list-style: none;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 10px 0;
+    color: #555;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Animation */
+@keyframes slideAnimation {
+    0% {
+        transform: translateY(0%);
+    }
+
+    10% {
+        transform: translateY(-10%);
+    }
+
+    20% {
+        transform: translateY(-20%);
+    }
+
+    30% {
+        transform: translateY(-30%);
+    }
+
+    40% {
+        transform: translateY(-40%);
+    }
+
+    50% {
+        transform: translateY(-50%);
+    }
+
+    60% {
+        transform: translateY(-60%);
+    }
+
+    70% {
+        transform: translateY(-70%);
+    }
+
+    80% {
+        transform: translateY(-80%);
+    }
+
+    90% {
+        transform: translateY(-90%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
 }
 
 /* 📍 Center the Enquiry Container */
@@ -575,97 +635,36 @@ a:hover {
     }
 }
 
-/*why schoose us */
-.serviceus {
+/*image .slider */
+.slider-container {
     width: 100%;
-    max-width: 600px;
-    margin: auto;
-    padding: 20px;
-    text-align: center;
-    background: #ffffff;
-    /* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 10px; */
-    overflow: hidden;
-}
-
-.serviceus h3 {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 15px;
-    color: #333;
-}
-
-.slideshow-container {
+    max-width: 200px;
+    /* Ensure it fits your image size */
+    height: 200px;
+    /* Keep image aspect ratio */
+    margin: 20px auto;
     position: relative;
-    width: 100%;
-    height: 50px;
     overflow: hidden;
+    /* border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.slideshow {
-    display: flex;
-    flex-direction: column;
+.slider-container img {
     position: absolute;
     width: 100%;
-    animation: slideAnimation 10s infinite linear;
+    height: 100%;
+    object-fit: cover;
+    /* Ensures images fit without distortion */
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
 }
 
-.slideshow li {
-    list-style: none;
-    font-size: 18px;
-    font-weight: 500;
-    padding: 10px 0;
-    color: #555;
-    transition: opacity 0.5s ease-in-out;
+.slider-container img.active {
+    opacity: 1;
 }
-
-/* Animation */
-@keyframes slideAnimation {
-    0% {
-        transform: translateY(0%);
-    }
-
-    10% {
-        transform: translateY(-10%);
-    }
-
-    20% {
-        transform: translateY(-20%);
-    }
-
-    30% {
-        transform: translateY(-30%);
-    }
-
-    40% {
-        transform: translateY(-40%);
-    }
-
-    50% {
-        transform: translateY(-50%);
-    }
-
-    60% {
-        transform: translateY(-60%);
-    }
-
-    70% {
-        transform: translateY(-70%);
-    }
-
-    80% {
-        transform: translateY(-80%);
-    }
-
-    90% {
-        transform: translateY(-90%);
-    }
-
-    100% {
-        transform: translateY(-100%);
-    }
-}
-
 
 /* Contact Section */
 .contact {

@@ -5,6 +5,15 @@ window.onload = function () {
     document.getElementById("popup-container").style.opacity = "1";
   }, 500); // 0.5s delay before showing popup
 };
+
+//Navbar scroll down functionality
+function toggleMenu() {
+  const menu = document.querySelector(".menu-links");
+  const icon = document.querySelector(".hamburger-icon");
+  menu.classList.toggle("open");
+  icon.classList.toggle("open");
+}
+
 //Aos animation in mobile view
 document.addEventListener("DOMContentLoaded", function () {
   if (window.innerWidth < 768) { // Apply AOS only for mobile view
@@ -21,15 +30,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 });
-
-
-//Navbar scroll down functionality
-function toggleMenu() {
-  const menu = document.querySelector(".menu-links");
-  const icon = document.querySelector(".hamburger-icon");
-  menu.classList.toggle("open");
-  icon.classList.toggle("open");
-}
 
 let lastScrollTop = 0;
 const navbar = document.querySelector("nav");
@@ -51,20 +51,6 @@ window.addEventListener("scroll", () => {
 
   lastScrollTop = scrollTop;
 }, { passive: true });
-
-//image slider
-document.addEventListener("DOMContentLoaded", function () {
-  const images = document.querySelectorAll(".slider-container img");
-  let index = 0;
-
-  function showNextImage() {
-    images[index].classList.remove("active"); // Hide current image
-    index = (index + 1) % images.length; // Move to next image
-    images[index].classList.add("active"); // Show next image
-  }
-
-  setInterval(showNextImage, 2000); // Change image every 0.5 seconds
-});
 
 function closePopup() {
   document.getElementById("popup-container").style.opacity = "0";
@@ -89,6 +75,20 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   setInterval(slideItems, 2000);
+});
+
+//image slider
+document.addEventListener("DOMContentLoaded", function () {
+  const images = document.querySelectorAll(".slider-container img");
+  let index = 0;
+
+  function showNextImage() {
+    images[index].classList.remove("active"); // Hide current image
+    index = (index + 1) % images.length; // Move to next image
+    images[index].classList.add("active"); // Show next image
+  }
+
+  setInterval(showNextImage, 2000); // Change image every 0.5 seconds
 });
 
 
