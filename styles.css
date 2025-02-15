@@ -33,8 +33,9 @@ a,
 nav,
 .nav-links {
     display: flex;
-    
+
 }
+
 nav {
     position: fixed;
     top: 0;
@@ -251,12 +252,15 @@ a:hover {
 .popup-content {
     position: relative;
     background: #fff;
-    padding: 0;  /* Removes extra padding */
+    padding: 0;
+    /* Removes extra padding */
     border-radius: 10px;
-    max-width: 500px; /* Limits popup width */
+    max-width: 500px;
+    /* Limits popup width */
     width: 90%;
     max-height: 90%;
-    overflow: hidden; /* Prevents content from overflowing */
+    overflow: hidden;
+    /* Prevents content from overflowing */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -266,10 +270,14 @@ a:hover {
 
 /* Responsive Image */
 .popup-content img {
-    width: 100%;  /* Ensures image fits inside popup */
-    max-height: 100%;  /* Prevents the image from exceeding the popup size */
-    object-fit: cover;  /* Fills container without distortion */
-    border-radius: 10px; /* Makes it blend smoothly with popup box */
+    width: 100%;
+    /* Ensures image fits inside popup */
+    max-height: 100%;
+    /* Prevents the image from exceeding the popup size */
+    object-fit: cover;
+    /* Fills container without distortion */
+    border-radius: 10px;
+    /* Makes it blend smoothly with popup box */
 }
 
 /* Close Button */
@@ -294,8 +302,15 @@ a:hover {
 
 /* Fade-in Animation */
 @keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.9); }
-    to { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 
@@ -338,8 +353,8 @@ a:hover {
     min-width: 300px;
     text-align: left;
     border-radius: 8px;
-    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, 
-                rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+        rgba(60, 64, 67, 0.15) 0px 1px 3px 1px;
 }
 
 .service-item h3 {
@@ -371,8 +386,10 @@ a:hover {
 /*image .slider */
 .slider-container {
     width: 100%;
-    max-width: 200px; /* Ensure it fits your image size */
-    height: 200px; /* Keep image aspect ratio */
+    max-width: 200px;
+    /* Ensure it fits your image size */
+    height: 200px;
+    /* Keep image aspect ratio */
     margin: 20px auto;
     position: relative;
     overflow: hidden;
@@ -387,7 +404,8 @@ a:hover {
     position: absolute;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensures images fit without distortion */
+    object-fit: cover;
+    /* Ensures images fit without distortion */
     opacity: 0;
     transition: opacity 0.3s ease-in-out;
 }
@@ -395,25 +413,29 @@ a:hover {
 .slider-container img.active {
     opacity: 1;
 }
+
 /* 📍 Center the Enquiry Container */
 .enquiry-container {
     width: 100%;
     min-height: 600px;
     display: flex;
     flex-direction: column;
-    align-items: center; /* Center horizontally */
-    justify-content: center; /* Center vertically */
-    /* background: #f9f9f9; */
+    align-items: center;
+    /* Center horizontally */
+    justify-content: center;
+    /* Center vertically */
+    background: #f9f9f9;
     padding: 40px 20px;
     position: relative;
 }
 
 /* 📍 Centered Text */
-.enquiry-container h1 {
+.enquiry-container h2 {
     text-align: center;
-    font-size: 50px;
-    font-weight: 200;
+    font-size: 2.8rem;
+    font-weight: bold;
     margin-bottom: 10px;
+
 }
 
 .enquiry-container h4 {
@@ -427,10 +449,13 @@ a:hover {
 .enquiry-form {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align input fields & button to the left */
-    gap: 20px; /* More space between inputs */
+    align-items: flex-start;
+    /* Align input fields & button to the left */
+    gap: 20px;
+    /* More space between inputs */
     width: 100%;
-    max-width: 400px; /* Keeps form compact */
+    max-width: 400px;
+    /* Keeps form compact */
     /* background: white; */
     padding: 30px;
     border-radius: 10px;
@@ -448,13 +473,14 @@ a:hover {
     border-radius: 5px;
     outline: none;
     transition: 0.3s ease-in-out;
-    margin-bottom: 10px; /* Add spacing below inputs */
+    margin-bottom: 10px;
+    /* Add spacing below inputs */
 }
 
 .enquiry-form input:focus,
 .enquiry-form select:focus {
-    border-color: #007bff;
-    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #8EC5FC;
+    box-shadow: 0 0 5px rgba(72, 162, 223, 0.5);
 }
 
 /* 📍 Professional Button Styling */
@@ -483,58 +509,69 @@ a:hover {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-/* 📍 Responsive Design */
-@media (max-width: 768px) {
-    .enquiry-container h1 {
-        font-size: 40px;
-    }
-
-    .enquiry-container h4 {
-        font-size: 16px;
-    }
-
-    .enquiry-form {
-        max-width: 90%;
-    }
-
-    .enquiry-form input,
-    .enquiry-form select {
-        width: 100%;
-        font-size: 14px;
-    }
-
-    .enquiry-form button {
-        font-size: 16px;
-    }
+/* Notification Styles */
+.notification {
+    position: fixed;
+    top: 90px;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50px);
+    min-width: 280px;
+    max-width: 90%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    font-size: 15px;
+    font-family: Arial, sans-serif;
+    opacity: 0;
+    transition: all 0.5s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-@media (max-width: 480px) {
-    .enquiry-container {
-        padding: 30px 10px;
+.notification.show {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+}
+
+.notification i {
+    font-size: 20px;
+}
+
+.notification.success {
+    background-color: #28a745;
+}
+
+.notification.error {
+    background-color: #dc3545;
+}
+
+/* Loading Spinner */
+.spinner {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #3498db;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 1000;
+}
+
+@keyframes spin {
+    0% {
+        transform: translate(-50%, -50%) rotate(0deg);
     }
 
-    .enquiry-container h1 {
-        font-size: 30px;
-    }
-
-    .enquiry-container h4 {
-        font-size: 14px;
-    }
-
-    .enquiry-form {
-        max-width: 100%;
-    }
-
-    .enquiry-form input,
-    .enquiry-form select {
-        width: 100%;
-        height: 45px;
-        font-size: 14px;
-    }
-
-    .enquiry-form button {
-        font-size: 14px;
-        padding: 12px;
+    100% {
+        transform: translate(-50%, -50%) rotate(360deg);
     }
 }
 
@@ -584,17 +621,49 @@ a:hover {
 
 /* Animation */
 @keyframes slideAnimation {
-    0% { transform: translateY(0%); }
-    10% { transform: translateY(-10%); }
-    20% { transform: translateY(-20%); }
-    30% { transform: translateY(-30%); }
-    40% { transform: translateY(-40%); }
-    50% { transform: translateY(-50%); }
-    60% { transform: translateY(-60%); }
-    70% { transform: translateY(-70%); }
-    80% { transform: translateY(-80%); }
-    90% { transform: translateY(-90%); }
-    100% { transform: translateY(-100%); }
+    0% {
+        transform: translateY(0%);
+    }
+
+    10% {
+        transform: translateY(-10%);
+    }
+
+    20% {
+        transform: translateY(-20%);
+    }
+
+    30% {
+        transform: translateY(-30%);
+    }
+
+    40% {
+        transform: translateY(-40%);
+    }
+
+    50% {
+        transform: translateY(-50%);
+    }
+
+    60% {
+        transform: translateY(-60%);
+    }
+
+    70% {
+        transform: translateY(-70%);
+    }
+
+    80% {
+        transform: translateY(-80%);
+    }
+
+    90% {
+        transform: translateY(-90%);
+    }
+
+    100% {
+        transform: translateY(-100%);
+    }
 }
 
 
@@ -607,7 +676,7 @@ a:hover {
 }
 
 .contact h2 {
-    color : #ffffff;
+    color: #ffffff;
     font-size: 2.8rem;
     margin-bottom: 20px;
 }

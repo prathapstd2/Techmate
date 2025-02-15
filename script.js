@@ -9,16 +9,12 @@ window.onload = function () {
 document.addEventListener("DOMContentLoaded", function () {
   if (window.innerWidth < 768) { // Apply AOS only for mobile view
     const serviceItems = document.querySelectorAll(".service-item");
-    const contact = document.querySelector(".contact");
 
     serviceItems.forEach((item, index) => {
       if (index !== 0) { // Exclude the first item (index 0)
         item.setAttribute("data-aos", "fade-up"); // Apply AOS
       }
     });
-    if (contact) {
-      contact.setAttribute("data-aos", "fade-up"); // Apply AOS to .contact
-    }
     AOS.init({
       duration: 1200,  // Animation duration in milliseconds
       once: true  // Animation will only happen once
@@ -94,24 +90,5 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(slideItems, 2000);
 });
-
-//Current year functionality
-document.getElementById("year").textContent = new Date().getFullYear();
-
-// const handbracker = document.getElementsByClassName("handbracker")[0];
-// const navlinks = document.getElementsByClassName("navlinks")[0];
-// handbracker.addEventListener('click',()=>{
-//     navlinks.classList.toggle("active");
-// });
-// function toggleMenu() {
-//     const menu = document.querySelector(".navlinks");
-//     const icon = document.querySelector(".hamburger");
-//     menu.classList.toggle("active");
-//     icon.classList.toggle("active");
-//   }
-//Alert mesage code
-// window.onload = function() {
-//   alert("👋 Welcome to TechMate Innovations! 🚀\n\nWe're thrilled to have you here. Dive in, explore, and let’s innovate together! ✨");
-// };
 
 

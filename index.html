@@ -20,6 +20,7 @@
             <ul class="nav-links">
                 <li><a href="#">Home</a></li>
                 <li><a href="#services">Services</a></li>
+                <li><a href="#enquiry-container">Enquriy</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
@@ -38,7 +39,8 @@
         <ul>
             <li class="hovera"><a href="#" onclick="toggleMenu()">Home</a></li>
             <li><a href="#services" onclick="toggleMenu()">Services</a></li>
-            <li class="hovera"><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+            <li class="hovera"><a href="#enquiry-container">Enquriy</a></li>
+            <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
     </div>
     </ul>
     </div>
@@ -48,14 +50,14 @@
         <div class="hero-content">
             <h1>Transforming Your Ideas Into Reality</h1>
             <p>We provide exceptional Advertising Design, Website Building, Logo Creations and Office Setup Services</p>
-            <a href="#contact" class="cta-button">Get Started</a>
+            <a href="#enquiry-container" class="cta-button">Get Started</a>
         </div>
     </section>
 
-    <div id="popup-container" data-aos="zoom-out">
-        <div class="popup-content" data-aos="zoom-out">
+    <div id="popup-container">
+        <div class="popup-content">
             <span class="close-btn" onclick="closePopup()">×</span>
-            <img src="notice.png" data-aos="zoom-out" alt="Popup Image">
+            <img src="assets/notice.png" alt="Popup Image">
         </div>
     </div>
     <!-- Services Section -->
@@ -109,18 +111,20 @@
         </div>
     </section>
     <div class="slider-container">
-        <img src="logotwo.png" class="active" alt="Second Image">
-        <img src="logothree.png" alt="Third Image">
-        <img src="logofour.png" alt="Fourth Image">
-        <img src="logoone.png" alt="First Image">
+        <img src="assets/logotwo.png" class="active" alt="Second Image">
+        <img src="assets/logothree.png" alt="Third Image">
+        <img src="assets/logofour.png" alt="Fourth Image">
+        <img src="assets/logoone.png" alt="First Image">
     </div>
 
-    <div class="enquiry-container">
-        <h1>Enquire With Us</h1>
+    <div class="enquiry-container" id="enquiry-container">
+        <h2>Enquire With Us</h2>
         <h4>Have a project in mind? Let's discuss!</h4>
-        <form class="enquiry-form">
+        <form id="enquiry-form" class="enquiry-form">
             <div class="input">
                 <input type="text" name="name" placeholder="Name" required>
+                <input type="text" name="age" placeholder="Age" required>
+                <input type="text" name="city" placeholder="City" required>
                 <input type="text" name="mobile" placeholder="Mobile No" required>
                 <select name="service" required>
                     <option value="" disabled selected>Select a service</option>
@@ -133,7 +137,64 @@
             </div>
         </form>
     </div>
-    
+
+    <!-- Loading Spinner -->
+    <div id="loading-spinner" class="spinner"></div>
+
+    <!-- JavaScript (AJAX) -->
+    <script>
+        document.getElementById("enquiry-form").addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevent page refresh
+
+            let formData = new FormData(this);
+            let spinner = document.getElementById("loading-spinner");
+            spinner.style.display = "block"; // Show spinner
+
+            fetch("send_email.php", {
+                method: "POST",
+                body: formData
+            })
+                .then(response => response.text())
+                .then(data => {
+                    if (data.includes("success")) {
+                        spinner.style.display = "none"; // Hide spinner
+                        showNotification("Enquiry sent successfully!", "success");
+                        document.getElementById("enquiry-form").reset(); // Clear the form
+                    } else {
+                        spinner.style.display = "none"; // Hide spinner
+                        showNotification("Failed to send Enquiry. Please try again.", "error");
+                    }
+                })
+                .catch(error => {
+                    spinner.style.display = "none"; // Hide spinner
+                    showNotification("⚠️ Something went wrong. Please try again.", "error");
+                });
+        });
+
+        function showNotification(message, type) {
+            let notification = document.createElement("div");
+            notification.classList.add("notification", "show", type);
+            let icon = document.createElement("i");
+
+            if (type === "success") {
+                icon.textContent = "✔️";
+            } else {
+                icon.textContent = "❌";
+            }
+
+            notification.textContent = message;
+            notification.prepend(icon);
+            document.body.appendChild(notification);
+
+            setTimeout(() => {
+                notification.classList.remove("show");
+                setTimeout(() => {
+                    notification.remove();
+                }, 500);
+            }, 3000);
+        }
+    </script>
+
     <div class="serviceus">
         <h3>Why Choose Us?</h3>
         <div class="slideshow-container">
@@ -178,12 +239,6 @@
     </footer>
 
 </body>
-<script>
-    AOS.init({
-      duration: 2000,  // Animation duration (in ms)
-      once: true,  // Animation will only happen once
-    });
-  </script>
 <script src="script.js"></script>
 
 
